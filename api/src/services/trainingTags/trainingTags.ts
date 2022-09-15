@@ -6,34 +6,32 @@ export const trainingTags: QueryResolvers['trainingTags'] = () => {
   return db.trainingTag.findMany()
 }
 
-export const trainingTag: QueryResolvers['trainingTag'] = ({ id }) => {
-  return db.trainingTag.findUnique({
-    where: { id },
-  })
-}
-
 export const createTrainingTag: MutationResolvers['createTrainingTag'] = ({
-  input,
+  tag,
 }) => {
   return db.trainingTag.create({
-    data: input,
+    data: {
+      name: tag
+    },
   })
 }
 
 export const updateTrainingTag: MutationResolvers['updateTrainingTag'] = ({
-  id,
-  input,
+  tag,
+  newName,
 }) => {
   return db.trainingTag.update({
-    data: input,
-    where: { id },
+    data: {
+      name: newName
+    },
+    where: { name: tag },
   })
 }
 
 export const deleteTrainingTag: MutationResolvers['deleteTrainingTag'] = ({
-  id,
+  tag,
 }) => {
   return db.trainingTag.delete({
-    where: { id },
+    where: { name: tag },
   })
 }

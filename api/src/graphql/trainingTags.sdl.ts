@@ -5,23 +5,14 @@ export const schema = gql`
 
   type Query {
     trainingTags: [TrainingTag!]! @requireAuth
-    trainingTag(id: String!): TrainingTag @requireAuth
-  }
-
-  input CreateTrainingTagInput {
-    name: String!
-  }
-
-  input UpdateTrainingTagInput {
-    name: String
   }
 
   type Mutation {
-    createTrainingTag(input: CreateTrainingTagInput!): TrainingTag! @requireAuth
+    createTrainingTag(tag: String!): TrainingTag! @requireAuth
     updateTrainingTag(
-      id: String!
-      input: UpdateTrainingTagInput!
+      tag: String!
+      newName: String!
     ): TrainingTag! @requireAuth
-    deleteTrainingTag(id: String!): TrainingTag! @requireAuth
+    deleteTrainingTag(tag: String!): TrainingTag! @requireAuth
   }
 `

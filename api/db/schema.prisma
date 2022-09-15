@@ -10,7 +10,7 @@ generator client {
 
 model TrainingTag {
   name     String     @id
-  Training Training[]
+  training Training[]
 }
 
 enum BallType {
@@ -19,30 +19,36 @@ enum BallType {
   NUMBERED_BALL
 }
 
-model Ball {
-  id               Int               @id @default(autoincrement())
-  type             BallType
-  color            String?
-  number           Int?
-  positionnedBalls PositionnedBall[]
+enum BallColor {
+  YELLOW
+  RED
 }
 
-model PositionnedBall {
-  id       Int     @id @default(autoincrement())
+model Ball {
+  id              Int              @id @default(autoincrement())
+  type            BallType
+  color           BallColor?
+  number          Int?
+  positionedBalls PositionedBall[]
+}
+
+model PositionedBall {
+  id       Int    @id @default(autoincrement())
   row      Int
   column   Int
-  ball     Ball    @relation(fields: [ballId], references: [id])
+  ball     Ball   @relation(fields: [ballId], references: [id], onDelete: Cascade)
   ballId   Int
-  layout   Layout @relation(fields: [layoutId], references: [id])
+  layout   Layout @relation(fields: [layoutId], references: [id], onDelete: Cascade)
   layoutId Int
 }
 
 model Layout {
-  id              Int               @id @default(autoincrement())
+  id              Int              @id @default(autoincrement())
   gridRowLevel    Int
   gridColumnLevel Int
-  balls           PositionnedBall[]
-  trainingBloc    TrainingBloc[]
+  balls           PositionedBall[]
+  trainingBloc    TrainingBloc     @relation(fields: [trainingBlocId], references: [id], onDelete: Cascade)
+  trainingBlocId  Int              @unique
 }
 
 enum TrainingBlocType {
@@ -55,9 +61,8 @@ model TrainingBloc {
   type       TrainingBlocType
   title      String           @unique
   text       String?
-  layout     Layout?          @relation(fields: [layoutId], references: [id])
-  layoutId   Int?
-  training   Training         @relation(fields: [trainingId], references: [id])
+  layout     Layout?
+  training   Training         @relation(fields: [trainingId], references: [id], onDelete: Cascade)
   trainingId Int
 }
 
