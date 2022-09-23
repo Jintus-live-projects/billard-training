@@ -1,4 +1,10 @@
-# README
+# Bienvenue sur le projet Billard Training
+
+## Présentation & contexte
+
+Je suis Justin GALLY, connu sous le nom de Jintus sur [Twitch](twitch.tv/jintuslive) et [Twitter](twitter.com/jintuslive).
+
+Je suis développeur WEB freelance sur Lyon et me suis lancé dans une aventure sur Twitch depuis peu. Mon but ? Partager à un maximum de personnes ma passion, le dévelopement informatique, découvrir et m'améliorer en continue sur les technos du marché.
 
 Welcome to [RedwoodJS](https://redwoodjs.com)!
 
