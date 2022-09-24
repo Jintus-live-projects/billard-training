@@ -1,8 +1,8 @@
 # Bienvenue sur le projet Billard Training
 
-## Présentation & contexte
+## Présentation et contexte
 
-Je suis Justin GALLY, connu sous le nom de Jintus sur [Twitch](https://www.twitch.tv/jintuslive) et [Twitter](https://www.twitter.com/jintuslive).
+Je me présente Justin GALLY, connu sous le nom de Jintus sur [Twitch](https://www.twitch.tv/jintuslive) et [Twitter](https://www.twitter.com/jintuslive).
 
 Je suis développeur WEB freelance sur Lyon et me suis lancé dans une aventure sur Twitch depuis peu. Mon but ? Partager à un maximum de personnes ma passion, le dévelopement informatique, découvrir et m'améliorer en continue sur les technos WEB.
 
@@ -12,7 +12,7 @@ Le projet Billard Training en fait partie.
 
 ## Stack technique
 
-Le projet est basé sur le framework [RedwoodJS](https://redwoodjs.com)!
+Le projet est basé sur le framework [RedwoodJS](https://redwoodjs.com)
 
 > **Prérequis**
 >
@@ -52,7 +52,7 @@ Le playground GraphQL est accesible à l'addresse suivante http://localhost:8911
 
 ## Contribution
 
-Tout le monde peut proposer des pull requests qui seront relu en live sur [Twitch](https://www.twitch.tv/jintuslive). Si vous souhaitez être un collaborateur actif du projet et donc y acceder en tant que developpeur, il faudra être un viewer régulier de la chaîne et participer aux émissions de façon active. Passer en live en discuter :)
+Tout le monde peut proposer des pull requests, en se basant sur qui seront relu en live sur [Twitch](https://www.twitch.tv/jintuslive). Si vous souhaitez être un collaborateur actif du projet et donc y acceder en tant que developpeur, il faudra être un viewer régulier de la chaîne et participer aux émissions de façon active. Passer en live en discuter :)
 
 ### Règle de contribution
 
