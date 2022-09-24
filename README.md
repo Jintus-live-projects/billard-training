@@ -4,14 +4,42 @@
 
 Je suis Justin GALLY, connu sous le nom de Jintus sur [Twitch](https://www.twitch.tv/jintuslive) et [Twitter](https://www.twitter.com/jintuslive).
 
-Je suis développeur WEB freelance sur Lyon et me suis lancé dans une aventure sur Twitch depuis peu. Mon but ? Partager à un maximum de personnes ma passion, le dévelopement informatique, découvrir et m'améliorer en continue sur les technos du marché.
+Je suis développeur WEB freelance sur Lyon et me suis lancé dans une aventure sur Twitch depuis peu. Mon but ? Partager à un maximum de personnes ma passion, le dévelopement informatique, découvrir et m'améliorer en continue sur les technos WEB.
 
-Welcome to [RedwoodJS](https://redwoodjs.com)!
+Dans cette optique, j'anime une emission où je développe des application en direct.
 
-> **Prerequisites**
+Le projet Billard Training en fait partie.
+
+## Contribution
+
+Tout le monde peut proposer des pull-requests qui seront review en live sur [Twitch](https://www.twitch.tv/jintuslive). Si vous souhaiter être un collaborateur actif du projet et donc y acceder en tant que developpeur, il faudra être un viewer régulier de la chaîne et participer aux émissions de façon active. Passer en live en discuter :)
+
+## Stack technique
+
+Le projet est basé sur le framework [RedwoodJS](https://redwoodjs.com)!
+
+> **Prerequis**
 >
-> - Redwood requires [Node.js](https://nodejs.org/en/) (>=14.19.x <=16.x) and [Yarn](https://yarnpkg.com/) (>=1.15)
-> - Are you on Windows? For best results, follow our [Windows development setup](https://redwoodjs.com/docs/how-to/windows-development-setup) guide
+> - [Node.js](https://nodejs.org/en/) (16.17.x)
+> - [Yarn](https://yarnpkg.com/) (>= 3.x)
+> - [Docker](https://www.docker.com/)
+
+## Installer le projet
+
+> **Si vous n'êtes pas un viewer régulier**
+>
+> Il faut faire un fork du projet avant de faire les étapes suivantes.
+
+Cloner le projet en local
+
+```
+git clone [git URL]
+```
+
+Installer les dépendances
+
+```
+yarn install --immutable
 
 Start by installing dependencies:
 
