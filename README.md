@@ -4,9 +4,9 @@
 
 Je me présente Justin GALLY, connu sous le nom de Jintus sur [Twitch](https://www.twitch.tv/jintuslive) et [Twitter](https://www.twitter.com/jintuslive).
 
-Je suis développeur WEB freelance sur Lyon et me suis lancé dans une aventure sur Twitch depuis peu. Mon but ? Partager à un maximum de personnes ma passion, le dévelopement informatique, découvrir et m'améliorer en continue sur les technos WEB.
+Je suis développeur WEB freelance sur Lyon et me suis lancé dans une aventure sur Twitch depuis peu. Mon but ? Partager à un maximum de personnes ma passion, le développement informatique, découvrir et m'améliorer en continue sur les technos WEB.
 
-Dans cette optique, j'anime une emission où je développe des applications en direct.
+Dans cette optique, j'anime une émission où je développe des applications en direct.
 
 Le projet Billard Training en fait partie.
 
@@ -52,11 +52,14 @@ Le playground GraphQL est accesible à l'addresse suivante http://localhost:8911
 
 ## Contribution
 
-Tout le monde peut proposer des pull requests, en se basant sur qui seront relu en live sur [Twitch](https://www.twitch.tv/jintuslive). Si vous souhaitez être un collaborateur actif du projet et donc y acceder en tant que developpeur, il faudra être un viewer régulier de la chaîne et participer aux émissions de façon active. Passer en live en discuter :)
+Tout le monde peut proposer des pull requests qui seront relu en live sur [Twitch](https://www.twitch.tv/jintuslive).
+Les pull requests devront être associées à une issue Github, existante ou nouvellement créée.
+
+Si vous souhaitez être un collaborateur actif du projet et donc y accéder en tant que développeur, il faudra être un viewer régulier de la chaîne et participer aux émissions de façon active. Passer en live en discuter 
 
 ### Règle de contribution
 
 Toute pull request doit :
-- Passer la pipeline d'intégration continue avant d'être relu
+- Passer le pipeline d'intégration continue avant d'être relu
 - Être relu par moi ou un contributeur actif du projet
 
