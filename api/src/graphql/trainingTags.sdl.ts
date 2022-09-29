@@ -9,10 +9,7 @@ export const schema = gql`
 
   type Mutation {
     createTrainingTag(tag: String!): TrainingTag! @requireAuth
-    updateTrainingTag(
-      tag: String!
-      newName: String!
-    ): TrainingTag! @requireAuth
+    updateTrainingTag(tag: String!, newName: String!): TrainingTag! @requireAuth
     deleteTrainingTag(tag: String!): TrainingTag! @requireAuth
   }
 `

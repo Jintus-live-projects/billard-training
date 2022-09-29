@@ -18,8 +18,12 @@ export const schema = gql`
 
   type Mutation {
     createTraining(training: CreateTrainingInput!): Training! @requireAuth
-    addRichTextBloc(trainingId: Int!, bloc: CreateRichTextBloc): Training! @requireAuth
-    addTableLayoutBloc(trainingId: Int!, bloc: CreateTableLayoutBloc): Training! @requireAuth
+    addRichTextBloc(trainingId: Int!, bloc: CreateRichTextBloc): Training!
+      @requireAuth
+    addTableLayoutBloc(
+      trainingId: Int!
+      bloc: CreateTableLayoutBloc
+    ): Training! @requireAuth
     deleteTraining(id: Int!): Training! @requireAuth
   }
 `
