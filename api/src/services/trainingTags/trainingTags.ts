@@ -11,7 +11,7 @@ export const createTrainingTag: MutationResolvers['createTrainingTag'] = ({
 }) => {
   return db.trainingTag.create({
     data: {
-      name: tag
+      name: tag,
     },
   })
 }
@@ -22,7 +22,7 @@ export const updateTrainingTag: MutationResolvers['updateTrainingTag'] = ({
 }) => {
   return db.trainingTag.update({
     data: {
-      name: newName
+      name: newName,
     },
     where: { name: tag },
   })

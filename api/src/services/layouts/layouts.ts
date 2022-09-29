@@ -1,11 +1,12 @@
-import {db} from "src/lib/db";
+import { db } from 'src/lib/db'
 
 export const Layout = {
-  balls: (_args, {root}) => db.positionedBall.findMany({
-    where: {
-      layout: {
-        id: root.id
-      }
-    }
-  })
+  balls: (_args, { root }) =>
+    db.positionedBall.findMany({
+      where: {
+        layout: {
+          id: root.id,
+        },
+      },
+    }),
 }
