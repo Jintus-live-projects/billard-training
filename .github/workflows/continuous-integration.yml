@@ -49,6 +49,29 @@ jobs:
           key: node-modules-${{ hashFiles('yarn.lock') }}
       - run: yarn rw build
 
+  circular-dependencies:
+    needs:
+      - setup-yarn
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v3
+      - name: Use NodeJS 16.17
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.17
+          cache: 'yarn'
+      - name: Uncaching node_modules
+        uses: actions/cache@v3
+        with:
+          path: ./node_modules
+          key: node-modules-${{ hashFiles('yarn.lock') }}
+      - name: Check api circular dependencies
+        run: yarn madge -c -s --extensions ts --ts-config api/tsconfig.json api
+      - name: Check web circular dependencies
+        run: yarn madge -c -s --extensions ts,tsx --ts-config web/tsconfig.json web
+
   test:
     needs:
       - setup-yarn
