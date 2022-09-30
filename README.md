@@ -1,3 +1,5 @@
+[![Continuous integration](https://github.com/Jintus-live-projects/billard-training/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/Jintus-live-projects/billard-training/actions/workflows/continuous-integration.yml)
+
 # Bienvenue sur le projet Billard Training
 
 ## Présentation et contexte
