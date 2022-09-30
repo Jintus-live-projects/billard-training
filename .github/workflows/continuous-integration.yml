@@ -77,6 +77,14 @@ jobs:
       - setup-yarn
 
     runs-on: ubuntu-latest
+    services:
+      test-db:
+        image: postgres:14
+        env:
+          POSTGRES_PASSWORD: jintuslive-test
+          POSTGRES_DB: billard_training_test
+        ports:
+          - 5433:5432
     steps:
       - name: Checkout branch
         uses: actions/checkout@v3
@@ -90,7 +98,7 @@ jobs:
         with:
           path: ./node_modules
           key: node-modules-${{ hashFiles('yarn.lock') }}
-      - run: yarn rw test
+      - run: yarn rw test --watch false
 
   lint:
     needs:
