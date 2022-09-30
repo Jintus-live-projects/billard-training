@@ -12,7 +12,8 @@
   },
   "devDependencies": {
     "@redwoodjs/core": "2.2.3",
-    "madge": "^5.0.1"
+    "madge": "^5.0.1",
+    "prettier-plugin-tailwindcss": "^0.1.13"
   },
   "eslintConfig": {
     "extends": "@redwoodjs/eslint-config",
