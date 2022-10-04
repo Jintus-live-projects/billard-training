@@ -11,3 +11,7 @@
 /**
  * END --- SETUP TAILWINDCSS EDIT
  */
+
+* {
+  box-sizing: border-box;
+}
