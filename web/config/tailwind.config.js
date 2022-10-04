@@ -8,6 +8,10 @@ module.exports = {
           light: '#E5F2FF',
           DEFAULT: '#3D99F5',
         },
+        accent: {
+          light: '#F3E8FF',
+          DEFAULT: '#8047B9',
+        },
       },
     },
     fontFamily: {
