@@ -1,10 +1,15 @@
-import { Router, Route } from '@redwoodjs/router'
+import { Route, Router, Set } from '@redwoodjs/router'
+
+import MainLayout from 'src/layouts/MainLayout/MainLayout'
 
 const Routes = () => {
   return (
     <Router>
-      <Route path="/" page={HomePage} name="home" />
+      <Set wrap={MainLayout}>
+        <Route path="/trainings" page={TrainingDetailPage} name="trainingDetail" />
+      </Set>
       <Route notfound page={NotFoundPage} />
+      <Route path="/" page={NotFoundPage} name="home" />
     </Router>
   )
 }
