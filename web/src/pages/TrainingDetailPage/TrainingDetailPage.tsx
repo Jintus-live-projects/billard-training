@@ -1,19 +1,21 @@
+import { useParams } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
-const TrainingDetailPage = () => {
-  return (
-    <>
-      <MetaTags title="TrainingDetail" description="TrainingDetail page" />
+import TrainingCell from 'src/components/TrainingCell'
 
-      <h1>TrainingDetailPage</h1>
-      <p>
-        Find me in{' '}
-        <code>./web/src/pages/TrainingDetailPage/TrainingDetailPage.tsx</code>
-      </p>
-      <p>
-        My default route is named <code>trainingDetail</code>, link to me with `
-      </p>
-    </>
+const TrainingDetailPage = () => {
+  const { id: trainingId } = useParams()
+  let content
+  if (trainingId !== undefined) {
+    content = <TrainingCell id={Number.parseInt(trainingId, 10)}></TrainingCell>
+  } else {
+    content = <>No training selected</>
+  }
+  return (
+    <div>
+      <MetaTags title="TrainingDetail" description="TrainingDetail page" />
+      {content}
+    </div>
   )
 }
 

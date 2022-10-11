@@ -7,13 +7,11 @@ export interface TopbarLinkProps {
 
 export const TopbarLink = ({ to, children }: TopbarLinkProps) => {
   const matchInfo = useMatch(to)
-  const borderColor = matchInfo.match
-    ? 'border-secondary'
-    : 'border-transparent'
   return (
     <Link
       to={to}
-      className={`grid place-content-center border-b-4 px-2 py-4 ${borderColor}`}
+      className="grid place-content-center border-b-4 border-transparent px-2 py-4 aria-selected:border-secondary"
+      aria-selected={matchInfo.match}
     >
       {children}
     </Link>

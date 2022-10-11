@@ -1,22 +1,17 @@
-import { ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 
 interface ChipProps {
   isActive?: boolean
-  value: string
-  children?: {
-    prefix?: ReactNode
-  }
+  children: ReactNode
 }
 
-const Chip = ({ isActive = false, children, value }: ChipProps) => {
-  const ACTIVE_CLASSES = isActive
-    ? 'bg-accent text-accent-light'
-    : 'bg-accent-light text-accent'
-
+const Chip = ({ isActive = false, children }: ChipProps) => {
   return (
-    <span className={`rounded-full px-2 py-1 text-xs ${ACTIVE_CLASSES}`}>
-      {children?.prefix}
-      {value}
+    <span
+      className="rounded-full bg-accent-light px-2 py-1 text-xs text-accent aria-selected:bg-accent aria-selected:text-accent-light"
+      aria-selected={isActive}
+    >
+      {children}
     </span>
   )
 }

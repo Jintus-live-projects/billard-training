@@ -1,31 +1,32 @@
-import { LocationProvider } from '@redwoodjs/router'
+import { useMatch } from '@redwoodjs/router'
 import { render } from '@redwoodjs/testing/web'
 
 import TopbarLink from './TopbarLink'
 
 describe('TopbarLink', () => {
   it('should render children', () => {
+    jest.mocked(useMatch).mockReturnValue({ match: false })
+    const { getByText } = render(
+      <TopbarLink to="/mockPath">Children</TopbarLink>
+    )
+    expect(getByText('Children')).toBeInTheDocument()
+  })
+
+  it('should be active', () => {
+    jest.mocked(useMatch).mockReturnValue({ match: true })
+
     const { container } = render(
       <TopbarLink to="/mockPath">Children</TopbarLink>
     )
-    expect(container.querySelector('a')).toBeInTheDocument()
+    expect(container.querySelector('[aria-selected="true"]')).toBeDefined()
   })
 
-  it('should have active class', () => {
-    const { container } = render(
-      <LocationProvider location={{ pathname: '/mockPath' }}>
-        <TopbarLink to="/mockPath">Children</TopbarLink>
-      </LocationProvider>
-    )
-    expect(container.querySelector('a')).toHaveClass('border-secondary')
-  })
+  it('should be inactive', () => {
+    jest.mocked(useMatch).mockReturnValue({ match: false })
 
-  it('should not have inactive class', () => {
     const { container } = render(
-      <LocationProvider location={{ pathname: '/mockPathOther' }}>
-        <TopbarLink to="/mockPath">Children</TopbarLink>
-      </LocationProvider>
+      <TopbarLink to="/mockPath">Children</TopbarLink>
     )
-    expect(container.querySelector('a')).toHaveClass('border-transparent')
+    expect(container.querySelector('[aria-selected="false"]')).toBeDefined()
   })
 })

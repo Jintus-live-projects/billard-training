@@ -4,6 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        light: {
+          primary: '#FFFFFF',
+          secondary: '#FAFAFA',
+        },
         secondary: {
           light: '#E5F2FF',
           DEFAULT: '#3D99F5',
@@ -11,6 +15,10 @@ module.exports = {
         accent: {
           light: '#F3E8FF',
           DEFAULT: '#8047B9',
+        },
+        gray: {
+          light: '#D1D1D1',
+          DEFAULT: '#92969F',
         },
       },
     },

@@ -8,6 +8,7 @@ export const schema = gql`
 
   type Query {
     trainings: [Training!]! @requireAuth
+    trainings(tags: [String!], exclusive: Boolean): [Training!]! @requireAuth
     training(id: Int!): Training @requireAuth
   }
 
