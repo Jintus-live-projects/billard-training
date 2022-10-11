@@ -22,8 +22,24 @@ export const Training = {
     }),
 }
 
-export const trainings: QueryResolvers['trainings'] = () => {
-  return db.training.findMany()
+export const trainings: QueryResolvers['trainings'] = ({ tags, exclusive }) => {
+  if (!tags?.length) {
+    return db.training.findMany()
+  }
+
+  return db.training.findMany({
+    where: {
+      [exclusive ? 'AND' : 'OR']: tags.map((tag) => ({
+        tags: {
+          some: {
+            name: {
+              equals: tag,
+            },
+          },
+        },
+      })),
+    },
+  })
 }
 
 export const training: QueryResolvers['training'] = ({ id }) => {
