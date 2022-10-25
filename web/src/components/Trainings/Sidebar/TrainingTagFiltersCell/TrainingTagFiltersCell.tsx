@@ -18,6 +18,15 @@ export const QUERY = gql`
   }
 `
 
+export const beforeQuery: (
+  unknown
+) => GraphQLQueryHookOptions<unknown, unknown> = (props) => {
+  return {
+    variables: props,
+    fetchPolicy: 'cache-first',
+  }
+}
+
 export const Loading = () => (
   <div className="flex w-full gap-x-2">
     <Loader className="h-6 w-1/5 rounded-full" />

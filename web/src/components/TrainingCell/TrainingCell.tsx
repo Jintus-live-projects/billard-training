@@ -45,6 +45,15 @@ export const QUERY = gql`
   }
 `
 
+export const beforeQuery: (
+  unknown
+) => GraphQLQueryHookOptions<unknown, unknown> = (props) => {
+  return {
+    variables: props,
+    fetchPolicy: 'cache-first',
+  }
+}
+
 export const Loading = () => <div>Loading...</div>
 
 export const Empty = () => <div>Empty</div>

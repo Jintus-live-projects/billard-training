@@ -14,7 +14,7 @@ const TrainingsSidebar = () => {
     } else {
       updatedSelectedFilters.add(filter)
     }
-    setSelectedFilters([...updatedSelectedFilters])
+    setSelectedFilters([...updatedSelectedFilters].sort())
   }
 
   return (

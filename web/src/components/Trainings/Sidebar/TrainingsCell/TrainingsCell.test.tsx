@@ -4,7 +4,7 @@ import { render } from '@redwoodjs/testing/web'
 import Loader from 'src/components/Loader/Loader'
 import TrainingListItem from 'src/components/Trainings/Sidebar/TrainingListItem/TrainingListItem'
 
-import { Empty, Loading, Success } from './TrainingsCell'
+import { beforeQuery, Empty, Loading, Success } from './TrainingsCell'
 import { oneTraining, standard } from './TrainingsCell.mock'
 
 jest.mock('src/components/Loader/Loader')
@@ -13,6 +13,14 @@ jest.mock('src/components/Trainings/Sidebar/TrainingListItem/TrainingListItem')
 describe('TrainingsCell', () => {
   afterEach(() => {
     jest.clearAllMocks()
+  })
+
+  it('should setup cache policy to cache-first', () => {
+    const queryOptions = beforeQuery({})
+    expect(queryOptions).toMatchObject({
+      variables: {},
+      fetchPolicy: 'cache-first',
+    })
   })
 
   describe('Loading', () => {
