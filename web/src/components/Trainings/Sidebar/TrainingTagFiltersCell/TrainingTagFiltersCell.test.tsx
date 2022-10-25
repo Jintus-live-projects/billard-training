@@ -2,11 +2,9 @@ import { render } from '@redwoodjs/testing/web'
 
 import Chip from 'src/components/Chip/Chip'
 import Loader from 'src/components/Loader/Loader'
-import {
-  Loading,
-  Success,
-} from 'src/components/Trainings/Sidebar/TrainingTagFiltersCell/TrainingTagFiltersCell'
-import { standard } from 'src/components/Trainings/Sidebar/TrainingTagFiltersCell/TrainingTagFiltersCell.mock'
+
+import { beforeQuery, Loading, Success } from './TrainingTagFiltersCell'
+import { standard } from './TrainingTagFiltersCell.mock'
 
 export const unitTestProps = {
   unselected: {
@@ -32,6 +30,16 @@ jest.mock('src/components/Chip/Chip')
 describe('TrainingTagFiltersCell', () => {
   afterEach(() => {
     jest.clearAllMocks()
+  })
+
+  describe('beforeQuery', () => {
+    it('should setup cache policy to cache-first', () => {
+      const queryOptions = beforeQuery({})
+      expect(queryOptions).toMatchObject({
+        variables: {},
+        fetchPolicy: 'cache-first',
+      })
+    })
   })
 
   describe('Loading', () => {

@@ -1,3 +1,5 @@
+import { InMemoryCache } from '@apollo/client'
+
 import { FatalErrorBoundary, RedwoodProvider } from '@redwoodjs/web'
 import { RedwoodApolloProvider } from '@redwoodjs/web/apollo'
 
@@ -9,7 +11,11 @@ import './index.css'
 const App = () => (
   <FatalErrorBoundary page={FatalErrorPage}>
     <RedwoodProvider titleTemplate="%PageTitle | %AppTitle">
-      <RedwoodApolloProvider>
+      <RedwoodApolloProvider
+        graphQLClientConfig={{
+          cache: new InMemoryCache(),
+        }}
+      >
         <Routes />
       </RedwoodApolloProvider>
     </RedwoodProvider>
