@@ -20,6 +20,12 @@ module.exports = {
           light: '#D1D1D1',
           DEFAULT: '#92969F',
         },
+        billard: {
+          cloth: '#0269D5',
+        },
+      },
+      aspectRatio: {
+        '2/1': '2 / 1',
       },
     },
     fontFamily: {
