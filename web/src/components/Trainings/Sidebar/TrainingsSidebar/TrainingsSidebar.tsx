@@ -18,10 +18,10 @@ const TrainingsSidebar = () => {
   }
 
   return (
-    <nav className="h-full bg-light-secondary p-2">
+    <nav className="h-full bg-white-secondary p-2">
       <div className="flex flex-col gap-y-2">
         <div className="flex justify-between">
-          <span className="text-lg font-semibold text-gray-light">
+          <span className="text-lg font-semibold text-gray">
             Exercices
           </span>
           {/*Fixme: Add create button here*/}

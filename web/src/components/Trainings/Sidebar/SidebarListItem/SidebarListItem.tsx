@@ -6,7 +6,7 @@ interface SidebarListItemProps {
 const SidebarListItem = ({ value, isActive }: SidebarListItemProps) => {
   return (
     <div
-      className="rounded border-secondary p-2 hover:bg-secondary-light hover:text-secondary aria-selected:border-l-4 aria-selected:bg-secondary-light aria-selected:text-secondary"
+      className="rounded border-blue p-2 hover:bg-blue-light hover:text-blue aria-selected:border-l-4 aria-selected:bg-blue-light aria-selected:text-blue"
       aria-selected={isActive}
     >
       {value}

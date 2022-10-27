@@ -10,7 +10,7 @@ export const TopbarLink = ({ to, children }: TopbarLinkProps) => {
   return (
     <Link
       to={to}
-      className="grid place-content-center border-b-4 border-transparent px-2 py-4 aria-selected:border-secondary"
+      className="grid place-content-center border-b-4 border-transparent px-2 py-4 aria-selected:border-blue"
       aria-selected={matchInfo.match}
     >
       {children}

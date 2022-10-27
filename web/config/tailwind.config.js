@@ -4,21 +4,30 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        light: {
-          primary: '#FFFFFF',
-          secondary: '#FAFAFA',
-        },
-        secondary: {
+        blue: {
           light: '#E5F2FF',
           DEFAULT: '#3D99F5',
         },
-        accent: {
-          light: '#F3E8FF',
-          DEFAULT: '#8047B9',
+        red: {
+          light: '#FFE5E5',
+          DEFAULT: '#F5483D',
         },
         gray: {
-          light: '#D1D1D1',
-          DEFAULT: '#92969F',
+          active: '#92969F',
+          DEFAULT: '#D1D1D1',
+        },
+        white: {
+          DEFAULT: '#FFFFFF',
+          secondary: '#FAFAFA',
+        },
+        purple: {
+          light: '#F3E8FF',
+          DEFAULT: '#8047B9'
+        },
+        text: {
+          black: '#111827',
+          grey: '#92969F',
+          white: '#FFFFFF',
         },
         billard: {
           cloth: '#0269D5',
