@@ -3,7 +3,7 @@ interface LoaderProps {
 }
 
 const Loader = ({ className }: LoaderProps) => {
-  return <div className={`animate-pulse bg-gray-light ${className}`}></div>
+  return <div className={`animate-pulse bg-gray ${className}`}></div>
 }
 
 export default Loader
