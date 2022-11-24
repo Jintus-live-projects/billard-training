@@ -22,7 +22,7 @@ module.exports = {
         },
         purple: {
           light: '#F3E8FF',
-          DEFAULT: '#8047B9'
+          DEFAULT: '#8047B9',
         },
         text: {
           black: '#111827',
@@ -31,10 +31,17 @@ module.exports = {
         },
         billard: {
           cloth: '#0269D5',
+          grid: '#418fe0',
         },
       },
       aspectRatio: {
         '2/1': '2 / 1',
+      },
+      gridTemplateRows: {
+        border: '33px, 1fr, 33px',
+      },
+      gridTemplateColumns: {
+        border: '33px, 1fr, 33px',
       },
     },
     fontFamily: {
