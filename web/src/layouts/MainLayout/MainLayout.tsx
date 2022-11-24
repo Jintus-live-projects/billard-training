@@ -1,4 +1,4 @@
-import Topbar from 'src/components/Topbar/Topbar'
+import Topbar from 'src/components/TopBar/Topbar/Topbar'
 
 type MainLayoutProps = {
   children?: React.ReactNode

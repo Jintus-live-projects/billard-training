@@ -2,8 +2,8 @@ import type { TrainingTagFiltersQuery } from 'types/graphql'
 
 import type { CellSuccessProps } from '@redwoodjs/web'
 
-import Chip from 'src/components/Chip/Chip'
 import Loader from 'src/components/Loader/Loader'
+import Chip from 'src/components/Trainings/Chip/Chip'
 
 interface TrainingFilterListsCellProps {
   selectedFilters: string[]

@@ -77,59 +77,59 @@ const Billard = ({ children }: BillardProps) => {
         fill="#0380DC"
       />
       <circle
-        transform="rotate(-90 16 407)"
-        cx="16"
-        cy="407"
+        transform="rotate(-90 1050 411)"
+        cx="1050"
+        cy="411"
         r="4"
         fill="#fff"
       />
       <circle
-        transform="rotate(-90 16 285)"
-        cx="16"
-        cy="285"
+        transform="rotate(-90 1050 286)"
+        cx="1050"
+        cy="286"
         r="4"
         fill="#fff"
       />
       <circle
-        transform="rotate(-90 16 163)"
-        cx="16"
-        cy="163"
-        r="4"
-        fill="#fff"
-      />
-      <circle cx="165" cy="554" r="4" fill="#fff" />
-      <circle cx="289" cy="554" r="4" fill="#fff" />
-      <circle cx="413" cy="554" r="4" fill="#fff" />
-      <circle cx="661" cy="554" r="4" fill="#fff" />
-      <circle cx="785" cy="554" r="4" fill="#fff" />
-      <circle cx="909" cy="554" r="4" fill="#fff" />
-      <circle
-        transform="rotate(-90 1055 407)"
-        cx="1055"
-        cy="407"
+        transform="rotate(-90 1050 161)"
+        cx="1050"
+        cy="161"
         r="4"
         fill="#fff"
       />
       <circle
-        transform="rotate(-90 1055 285)"
-        cx="1055"
-        cy="285"
+        transform="rotate(-90 22 411)"
+        cx="22"
+        cy="411"
         r="4"
         fill="#fff"
       />
       <circle
-        transform="rotate(-90 1055 163)"
-        cx="1055"
-        cy="163"
+        transform="rotate(-90 22 286)"
+        cx="22"
+        cy="286"
         r="4"
         fill="#fff"
       />
-      <circle cx="165" cy="17" r="4" fill="#fff" />
-      <circle cx="289" cy="17" r="4" fill="#fff" />
-      <circle cx="413" cy="17" r="4" fill="#fff" />
+      <circle
+        transform="rotate(-90 22 161)"
+        cx="22"
+        cy="161"
+        r="4"
+        fill="#fff"
+      />
+      <circle cx="161" cy="556" r="4" fill="#fff" />
+      <circle cx="286" cy="556" r="4" fill="#fff" />
+      <circle cx="411" cy="556" r="4" fill="#fff" />
+      <circle cx="661" cy="556" r="4" fill="#fff" />
+      <circle cx="786" cy="556" r="4" fill="#fff" />
+      <circle cx="911" cy="556" r="4" fill="#fff" />
+      <circle cx="161" cy="17" r="4" fill="#fff" />
+      <circle cx="286" cy="17" r="4" fill="#fff" />
+      <circle cx="411" cy="17" r="4" fill="#fff" />
       <circle cx="661" cy="17" r="4" fill="#fff" />
-      <circle cx="785" cy="17" r="4" fill="#fff" />
-      <circle cx="909" cy="17" r="4" fill="#fff" />
+      <circle cx="786" cy="17" r="4" fill="#fff" />
+      <circle cx="911" cy="17" r="4" fill="#fff" />
     </svg>
   )
 }

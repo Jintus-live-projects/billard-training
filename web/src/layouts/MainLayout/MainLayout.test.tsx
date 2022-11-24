@@ -1,10 +1,10 @@
 import { render } from '@redwoodjs/testing/web'
 
-import Topbar from 'src/components/Topbar/Topbar'
+import Topbar from 'src/components/TopBar/Topbar/Topbar'
 
 import MainLayout from './MainLayout'
 
-jest.mock('src/components/Topbar/Topbar')
+jest.mock('src/components/TopBar/Topbar/Topbar')
 
 describe('MainLayout', () => {
   it('should render a Topbar', () => {

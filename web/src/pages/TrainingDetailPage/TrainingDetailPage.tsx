@@ -1,7 +1,7 @@
 import { useParams } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
-import TrainingCell from 'src/components/TrainingCell'
+import TrainingCell from 'src/components/Trainings/Details/TrainingCell'
 
 const TrainingDetailPage = () => {
   const { id: trainingId } = useParams()
