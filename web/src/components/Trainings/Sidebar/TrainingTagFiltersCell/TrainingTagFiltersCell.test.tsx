@@ -1,7 +1,7 @@
 import { render } from '@redwoodjs/testing/web'
 
-import Chip from 'src/components/Chip/Chip'
 import Loader from 'src/components/Loader/Loader'
+import Chip from 'src/components/Trainings/Chip/Chip'
 
 import { beforeQuery, Loading, Success } from './TrainingTagFiltersCell'
 import { standard } from './TrainingTagFiltersCell.mock'
@@ -25,7 +25,7 @@ export const unitTestProps = {
 }
 
 jest.mock('src/components/Loader/Loader')
-jest.mock('src/components/Chip/Chip')
+jest.mock('src/components/Trainings/Chip/Chip')
 
 describe('TrainingTagFiltersCell', () => {
   afterEach(() => {

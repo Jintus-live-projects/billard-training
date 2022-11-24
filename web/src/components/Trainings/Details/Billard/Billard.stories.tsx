@@ -3,7 +3,7 @@ import type { ComponentMeta } from '@storybook/react'
 import Billard from './Billard'
 
 export const generated = () => {
-  return <Billard />
+  return <Billard></Billard>
 }
 
 export default {

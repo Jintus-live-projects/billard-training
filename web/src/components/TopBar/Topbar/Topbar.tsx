@@ -1,6 +1,6 @@
 import { routes } from '@redwoodjs/router'
 
-import TopbarLink from 'src/components/TopbarLink/TopbarLink'
+import TopbarLink from 'src/components/TopBar/TopbarLink/TopbarLink'
 
 const Topbar = () => {
   return (
